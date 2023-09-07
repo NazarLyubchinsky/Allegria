@@ -1,7 +1,13 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+	const { t, i18n } = useTranslation()
+
+	const changeLanguage = (lang) => {
+		i18n.changeLanguage(lang)
+	}
 	return (
 		<header className='header'>
 			<div className="container">
@@ -22,19 +28,18 @@ const Header = () => {
 						</Link>
 					</h1>
 					<div className='header__menu'>
-						<Link to='/catalog' className='header__menu-link' >Женщины</Link>
-						<Link to='/catalog' className='header__menu-link' >Мужчины</Link>
-						<Link to='/about' className='header__menu-link' >О нас</Link>
+						<Link to='/catalog' className='header__menu-link' >{t("header.link1")}</Link>
+						<Link to='/catalog' className='header__menu-link' >{t("header.link2")}</Link>
+						<Link to='/about' className='header__menu-link' >{t("header.link3")}</Link>
 						<label htmlFor="" className='header__search'>
-							<span className='header__search-text'>поиск</span>
+							<span className='header__search-text'>{t("header.link4")}</span>
 							<input className='header__search-field' type="text" />
 						</label>
 					</div>
 					<div className='header__right'>
 						<div className='header__lang'>
-							<Link className='header__lang-link' >RU</Link>
-							<Link className='header__lang-link' >UA</Link>
-							<Link className='header__lang-link' >EN</Link>
+							<p className='header__lang-link' onClick={()=> changeLanguage("ua")} >UA</p>
+							<p className='header__lang-link' onClick={()=> changeLanguage("en")} >EN</p>
 						</div>
 						<div className='header__icons'>
 							<Link to='' className='header__icons-link'>
