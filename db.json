@@ -1,0 +1,46 @@
+{
+	"catalog": [
+		{
+			"id": 1,
+			"title": "george gina lucy",
+			"price": 100,
+			"category": "shoes",
+			"image": [
+				"./catalog/AirMAX.jpg",
+				"./catalog/AirMax2.jpg",
+				"./catalog/AirMax3.jpg",
+				"./catalog/AirMax4.jpg"
+			],
+			"sizes": [
+				{
+					"id": 1,
+					"size": 40,
+					"inStock": 3
+				},
+				{
+					"id": 2,
+					"size": 41,
+					"inStock": 4
+				},
+				{
+					"id": 3,
+					"size": 42,
+					"inStock": 5
+				},
+				{
+					"id": 4,
+					"size": 43,
+					"inStock": 6
+				},
+				{
+					"id": 5,
+					"size": 44,
+					"inStock": 7
+				}
+			],
+			"review": [],
+			"brand": "nike",
+			"gender": "men"
+		}
+	]
+}
