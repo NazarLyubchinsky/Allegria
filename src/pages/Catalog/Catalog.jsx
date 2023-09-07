@@ -6,10 +6,11 @@ import CatalogRow from './CatalogRow/CatalogRow'
 import SideBar from './SideBar/SideBar'
 
 const Catalog = () => {
-	const {Category, getProducts } = useContext(CustomContext)
+	const { getProducts } = useContext(CustomContext)
 
 	useEffect(() => {
 getProducts()
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 	return (
 		<section className='catalog'>

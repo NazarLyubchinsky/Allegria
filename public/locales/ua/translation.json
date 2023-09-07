@@ -8,5 +8,21 @@
 	"begin": {
 		"title": "Бренд",
 		"subtitle": "Переглянути колекцію"
+	},
+	"collection": {
+		"title": "Нова колекція",
+		"subtitle": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ipLoremipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip",
+		"link": "Переглянути колекцію",
+		"rightText": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip"
+	},
+	"about": {
+		"title": "Про нас",
+		"subtitle": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem"
+	},
+	"footer": {
+		"title": "Будьте в курсі подій",
+		"about": "Про нас",
+		"questions": "Поширені запитання",
+		"brands": "Бренди"
 	}
 }

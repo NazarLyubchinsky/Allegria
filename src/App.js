@@ -3,10 +3,11 @@ import { Route, Routes } from "react-router-dom";
 
 // pages
 import Layout from "./Layout/Layout";
-import About from "./pages/About/About";
 import Catalog from "./pages/Catalog/Catalog";
+import About from "./pages/Home/About/About";
 import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
+import Questions from "./pages/Questions/Questions";
 
 // lang
 import './utils/i18n'
@@ -19,6 +20,7 @@ function App() {
 					<Route path='' element={<Home />} />
 					<Route path='about' element={<About />} />
 					<Route path='catalog' element={<Catalog />} />
+					<Route path='questions' element={<Questions/>}/>
 					<Route path='*' element={<NotFound />} />
 				</Route>
 			</Routes>

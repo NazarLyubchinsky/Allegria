@@ -2,10 +2,27 @@
 	"header": {
 		"link1": "Women",
 		"link2": "Men",
-		"link3": "Search"
+		"link3": "About Us",
+		"link4": "Search"
 	},
 	"begin": {
 		"title": "Brand",
-		"subtitle": "View Collection"
+		"subtitle": "View the Collection"
+	},
+	"collection": {
+		"title": "New Collection",
+		"subtitle": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ipLoremipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip",
+		"link": "View Collection",
+		"rightText": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip"
+	},
+	"about": {
+		"title": "About Us",
+		"subtitle": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem"
+	},
+	"footer": {
+		"title": "Stay Informed",
+		"about": "About Us",
+		"questions": "Frequently Asked Questions",
+		"brands": "Brands"
 	}
 }
