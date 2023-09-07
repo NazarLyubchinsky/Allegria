@@ -52,5 +52,26 @@
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		color: #0f303f;
+		cursor: pointer;
+		transition: 0.5s;
+		position: relative;
+
+		&.active,
+		&:hover {
+			color: #e64926;
+			transition: 0.5s;
+		}
+		&.active {
+			&::before {
+				content: "";
+				position: absolute;
+				width: 25px;
+				height: 2px;
+				background: #e64926;
+				left: 50%;
+				top: 45px;
+				transform: translateX(-50%);
+			}
+		}
 	}
 }

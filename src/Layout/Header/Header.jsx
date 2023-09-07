@@ -38,8 +38,8 @@ const Header = () => {
 					</div>
 					<div className='header__right'>
 						<div className='header__lang'>
-							<p className='header__lang-link' onClick={()=> changeLanguage("ua")} >UA</p>
-							<p className='header__lang-link' onClick={()=> changeLanguage("en")} >EN</p>
+							<p className={`header__lang-link ${i18n.language === 'ua'? 'active': ''}`} onClick={()=> changeLanguage("ua")} >UA</p>
+							<p className={`header__lang-link ${i18n.language === 'en'? 'active': ''}`} onClick={()=> changeLanguage("en")} >EN</p>
 						</div>
 						<div className='header__icons'>
 							<Link to='' className='header__icons-link'>
