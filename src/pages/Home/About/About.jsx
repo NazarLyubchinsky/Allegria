@@ -1,8 +1,9 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import aboutImg from '../../../assets/about/about.png'
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+
 	const { t } = useTranslation()
 
 	return (
@@ -11,12 +12,10 @@ const About = () => {
 				<div className="about__content">
 					<div className="about__info">
 						<h2 className="about__title">
-						{t("about.title")}
-
+							{t("about.title")}
 						</h2>
 						<p className="about__desc">
-					{t("about.subtitle")}
-						
+						{t("about.subtitle")}
 						</p>
 					</div>
 

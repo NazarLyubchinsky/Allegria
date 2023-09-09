@@ -1,6 +1,6 @@
 import React from 'react';
-import { questionsData } from './QuestionsItem/question';
-import QuestionsItem from './QuestionsItem/QuestionsItem';
+import QuestionsItem from "./QuestionsItem/QuestionsItem";
+import { questionsData } from './QuestionsItem/question'
 
 const Questions = () => {
 	return (
@@ -17,16 +17,37 @@ const Questions = () => {
 				<h2 className="questions__title">
 					Популярные вопросы
 				</h2>
-				<ul className="questions__list">
-					<li className="questions__list-title">
-						ПОКУПКИ
-					</li>
-					{
-						questionsData.map((item) => (
-							<QuestionsItem item={item} />
-						))
-					}
-				</ul>
+				<div className="questions__row">
+					<ul className="questions__list">
+						<li className="questions__list-title">
+							ПОКУПКИ
+						</li>
+						{
+							questionsData.map((item) => (
+								<QuestionsItem item={item} />
+							))
+						}
+					</ul>
+					<form className="questions__form">
+						<h2 className="questions__form-title">
+							Есть вопросы
+							или предложения? <br />
+							НАПИШИТЕ НАМ
+						</h2>
+						<div className="questions__form-block">
+							<input type="text" className="questions__form-input" placeholder="Имя" />
+							<input type="email" className="questions__form-input" placeholder="E-mail" />
+							<p className="questions__form-ques">
+								Что Вас интересует:
+							</p>
+							<textarea className="questions__form-area" placeholder="Текс сообщения"></textarea>
+							<button className="questions__form-btn">
+								Отправить
+							</button>
+						</div>
+					</form>
+				</div>
+
 			</div>
 		</section>
 	);

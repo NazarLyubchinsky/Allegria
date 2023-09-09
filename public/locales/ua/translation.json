@@ -10,19 +10,48 @@
 		"subtitle": "Переглянути колекцію"
 	},
 	"collection": {
-		"title": "Нова колекція",
-		"subtitle": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ipLoremipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip",
-		"link": "Переглянути колекцію",
-		"rightText": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip"
+		"title": "Нові надходження",
+		"subtitleLeft": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ipLoremipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip",
+		"subtitleRight": " ipLoremipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip",
+		"link": "ДИВИТИСЯ КОЛЕКЦІЮ"
+	},
+	"popular": {
+		"title": "ПОПУЛЯРНЕ"
 	},
 	"about": {
 		"title": "Про нас",
-		"subtitle": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem"
+		"subtitle": "uaLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLoremipsumLoreLorem ipsumLorem ipsumLorem ipsumLorem ipsumLoremipLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLoremipsumLorem ipsumLorem ipsumipLorem ipsumLoremLorem ipsumLoremipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ipsumLorem"
+	},
+	"catalog": {
+		"menu1": "Головна",
+		"aside1": "Жінки",
+		"aside2": "Чоловіки",
+		"aside3": "Футболки",
+		"aside4": "Светри",
+		"aside5": "Штани",
+		"aside6": "Взуття",
+		"price": "Ціна",
+		"ascending": "За зростанням",
+		"descending": "За спаданням",
+		"brand": "Бренд",
+		"size": "Розмір",
+		"reset": "Скинути"
+	},
+	"cart": {
+		"title": "Ваш кошик порожній",
+		"text": "Додайте щось, щоб заощадити час і зробити <br/> шопінг ще приємнішим.",
+		"btn": "перейти в каталог"
+	},
+	"product": {
+		"btn1": "додати в кошик",
+		"btn2": " купити в один клік"
 	},
 	"footer": {
-		"title": "Будьте в курсі подій",
-		"about": "Про нас",
-		"questions": "Поширені запитання",
-		"brands": "Бренди"
+		"title": "БУДЬТЕ В КУРСІ ПОДІЙ",
+		"link1": "Про нас ",
+		"link2": "Поширені запитання",
+		"link3": "Бренди",
+		"text1": "Всі права захищені ",
+		"text2": "розробка: Назар Любчинський"
 	}
 }

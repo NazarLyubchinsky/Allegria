@@ -14,7 +14,7 @@
 	}
 	&__right {
 		width: 80%;
-		height: 100vh;
+		//height: 100vh;
 	}
 	&__row {
 		display: flex;
@@ -50,6 +50,49 @@
 			font-size: 14px;
 			letter-spacing: 0.045em;
 			color: #fd5454;
+		}
+		&-block {
+			position: relative;
+		}
+		&-like {
+			width: 45px;
+			height: 45px;
+			background: #ffffff;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			bottom: 15px;
+			right: 10px;
+			cursor: pointer;
+			//svg path {
+			//  fill: #E64926;
+			//  stroke: #E64926;
+			//}
+		}
+	}
+	&__pagination {
+		display: flex;
+		margin-top: 30px;
+		justify-content: center;
+		column-gap: 30px;
+	}
+	&__page {
+		width: 40px;
+		height: 40px;
+		border: 1px solid black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 20px;
+		cursor: pointer;
+		transition: 0.5s;
+		&.active,
+		&:hover {
+			background: black;
+			color: white;
+			transition: 0.5s;
 		}
 	}
 }

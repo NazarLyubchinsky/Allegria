@@ -1,0 +1,98 @@
+.product {
+	&__row {
+		display: flex;
+		justify-content: center;
+		column-gap: 36px;
+		margin-top: 20px;
+	}
+	&__slide {
+		width: 55%;
+	}
+	&__info {
+		width: 45%;
+	}
+	&__title {
+		font-weight: 500;
+		font-size: 35px;
+		text-transform: uppercase;
+		color: #0f303f;
+	}
+	&__category {
+		font-weight: 300;
+		font-size: 20px;
+		text-transform: capitalize;
+		color: #0f303f;
+	}
+	&__price {
+		font-weight: 500;
+		font-size: 20px;
+		letter-spacing: 0.045em;
+		text-transform: uppercase;
+		color: #0f303f;
+		margin: 6px 0 20px;
+	}
+	&__title-size {
+		font-weight: 400;
+		font-size: 12px;
+		color: #0f303f;
+		display: flex;
+	}
+	&__list {
+		display: flex;
+		column-gap: 10px;
+		margin-top: 6px;
+	}
+	&__size {
+		width: 35px;
+		height: 35px;
+		border: 1px solid #eae9e8;
+		font-weight: 400;
+		font-size: 12px;
+		color: #0f303f;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&_null {
+			background: #eae9e8;
+			width: 35px;
+			height: 35px;
+			font-weight: 400;
+			font-size: 12px;
+			color: #0f303f;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+.mySwiper2 {
+	width: 427.94px;
+	height: 520px;
+	margin-bottom: 15px;
+}
+
+.mySwiper {
+	width: 427.94px;
+	height: 20%;
+	box-sizing: border-box;
+	padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+	width: 25%;
+	height: 100%;
+	opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+	opacity: 1;
+}
+
+.product__slide-img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	object-fit: cover;
+}

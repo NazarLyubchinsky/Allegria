@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { CustomContext } from '../../utils/context';
 
 const Header = () => {
 	const { t, i18n } = useTranslation()
+	const { changeGender } = useContext(CustomContext)
 
 	const changeLanguage = (lang) => {
 		i18n.changeLanguage(lang)
@@ -28,8 +30,8 @@ const Header = () => {
 						</Link>
 					</h1>
 					<div className='header__menu'>
-						<Link to='/catalog' className='header__menu-link' >{t("header.link1")}</Link>
-						<Link to='/catalog' className='header__menu-link' >{t("header.link2")}</Link>
+						<Link onClick={() => changeGender('woman')} to='/catalog' className='header__menu-link' >{t("header.link1")}</Link>
+						<Link onClick={() => changeGender('men')} to={`/catalog`} className='header__menu-link' >{t("header.link2")}</Link>
 						<Link to='/about' className='header__menu-link' >{t("header.link3")}</Link>
 						<label htmlFor="" className='header__search'>
 							<span className='header__search-text'>{t("header.link4")}</span>
@@ -38,8 +40,8 @@ const Header = () => {
 					</div>
 					<div className='header__right'>
 						<div className='header__lang'>
-							<p className={`header__lang-link ${i18n.language === 'ua'? 'active': ''}`} onClick={()=> changeLanguage("ua")} >UA</p>
-							<p className={`header__lang-link ${i18n.language === 'en'? 'active': ''}`} onClick={()=> changeLanguage("en")} >EN</p>
+							<p className={`header__lang-link ${i18n.language === 'ua' ? 'active' : ''}`} onClick={() => changeLanguage("ua")} >UA</p>
+							<p className={`header__lang-link ${i18n.language === 'en' ? 'active' : ''}`} onClick={() => changeLanguage("en")} >EN</p>
 						</div>
 						<div className='header__icons'>
 							<Link to='' className='header__icons-link'>

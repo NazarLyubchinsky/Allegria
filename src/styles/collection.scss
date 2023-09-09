@@ -16,6 +16,7 @@
 			text-transform: uppercase;
 			color: #ffffff;
 		}
+
 		&-desc {
 			font-weight: 400;
 			font-size: 14px;
@@ -23,12 +24,17 @@
 			color: #ffffff;
 			margin: 15px 0 34px;
 		}
+
 		&-link {
 			font-weight: 400;
 			font-size: 16px;
 			letter-spacing: 0.045em;
 			text-transform: uppercase;
 			color: #eae9e8;
+			transition: color 0.3s ease-in;
+			&:hover {
+				color: black;
+			}
 		}
 	}
 	&__right {

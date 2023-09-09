@@ -7,6 +7,7 @@ import Catalog from "./pages/Catalog/Catalog";
 import About from "./pages/Home/About/About";
 import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
+import Product from "./pages/Product/Product";
 import Questions from "./pages/Questions/Questions";
 
 // lang
@@ -21,6 +22,7 @@ function App() {
 					<Route path='about' element={<About />} />
 					<Route path='catalog' element={<Catalog />} />
 					<Route path='questions' element={<Questions/>}/>
+					<Route path='product/:id' element={<Product/>}/>
 					<Route path='*' element={<NotFound />} />
 				</Route>
 			</Routes>

@@ -7,22 +7,52 @@
 	},
 	"begin": {
 		"title": "Brand",
-		"subtitle": "View the Collection"
+		"subtitle": "View Collection"
 	},
 	"collection": {
-		"title": "New Collection",
-		"subtitle": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ipLoremipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip",
-		"link": "View Collection",
-		"rightText": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip"
+		"title": "New Arrivals",
+		"subtitleLeft": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ipLoremipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip",
+		"subtitleRight": " ipLoremipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ip",
+		"link": "VIEW COLLECTION"
+	},
+	"popular": {
+		"title": "POPULAR"
 	},
 	"about": {
 		"title": "About Us",
-		"subtitle": "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLorem"
+		"subtitle": "enLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLoremipsumLoreLorem ipsumLorem ipsumLorem ipsumLorem ipsumLoremipLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLoremipsumLorem ipsumLorem ipsumipLorem ipsumLoremLorem ipsumLoremipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ipsumLorem"
+
+	},
+	"catalog": {
+		"menu1": "Home",
+		"aside1": "Women",
+		"aside2": "Men",
+		"aside3": "T-Shirts",
+		"aside4": "Sweaters",
+		"aside5": "Pants",
+		"aside6": "Shoes",
+		"price": "Price",
+		"ascending": "Ascending",
+		"descending": "Descending",
+		"brand": "Brand",
+		"size": "Size",
+		"reset": "Reset"
+	},
+	"cart": {
+		"title": "Your cart is empty",
+		"text": "Add something to save time and make <br/> shopping even more enjoyable.",
+		"btn": "Go to Catalog"
+	},
+	"product": {
+		"btn1": "Add to Cart",
+		"btn2": " Buy in One Click"
 	},
 	"footer": {
-		"title": "Stay Informed",
-		"about": "About Us",
-		"questions": "Frequently Asked Questions",
-		"brands": "Brands"
+		"title": "STAY UPDATED",
+		"link1": "About Us ",
+		"link2": "Frequently Asked Questions",
+		"link3": "Brands",
+		"text1": "All rights reserved ",
+		"text2": " development: Nazar Lyubchinskyi"
 	}
 }

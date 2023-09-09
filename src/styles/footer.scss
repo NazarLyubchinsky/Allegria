@@ -1,8 +1,6 @@
 .footer {
-	padding-top: 125px;
-	height: 304px;
-	border-top: 1px solid black;
-	padding-top: 200px;
+	padding-top: 160px;
+	max-height: 305px;
 	&__top {
 		padding: 65px 0 60px;
 		border-top: 1px solid #eae9e8;
@@ -38,6 +36,12 @@
 			border: 1px solid #e64926;
 			background: transparent;
 			cursor: pointer;
+			& svg {
+				transition: transform .5s ease-in; 
+			}
+			&:hover svg {
+				transform: translateX(15px);
+			}
 		}
 	}
 	&__list {
@@ -49,6 +53,10 @@
 		font-weight: 400;
 		font-size: 20px;
 		color: #b7c1c5;
+		transition: color 0.2s ease-in;
+		&:hover {
+			color: black;
+		}
 	}
 	&__bottom {
 		padding: 15px 0;

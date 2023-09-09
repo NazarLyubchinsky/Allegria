@@ -1,9 +1,13 @@
 .sideBar {
 	width: 20%;
 	height: 400px;
+	position: sticky;
+	top: 50px;
+	left: 0;
 
 	&__lang {
 		display: flex;
+		gap: 20px;
 		width: 100%;
 		border-bottom: 1px solid #eae9e8;
 		&-item {
@@ -19,8 +23,10 @@
 			letter-spacing: 0.1em;
 			text-transform: uppercase;
 			transition: 0.5s;
-			&.active,
 			&:hover {
+				color: #e64926;
+			}
+			&.active {
 				color: #e64926;
 				transition: 0.5s;
 				&::before {
