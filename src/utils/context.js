@@ -89,6 +89,43 @@ export const reducer = (state, action) => {
 					page: action.payload
 				}
 			}
+		case 'set_favorites':
+			return {
+				...state,
+				favorites: {
+					data: [...state.favorites.data, state.catalog.products.data.find(el => el.id === action.payload)],
+					dataLength: state.favorites.dataLength + 1
+				}
+			}
+		case 'delete_favorites':
+			return {
+				...state,
+				favorites: {
+					data: state.favorites.data.filter((el) => el.id !== action.payload),
+					dataLength: state.favorites.dataLength - 1
+				}
+			}
+		case 'set_carts':
+			return {
+				...state,
+				carts: {
+					data: state.carts.data.filter((el) => el.id === action.payload.id && el.size === action.payload.size).length ?
+						state.carts.data.map((el) => el.id === action.payload.id && el.size === action.payload.size ?
+							{ ...el, count: el.count + 1 } : el)
+						: [...state.carts.data, {
+							...action.payload, count: 1
+						}],
+					dataLength: state.carts.dataLength + 1
+				}
+			}
+		case 'delete_carts':
+			return {
+				...state,
+				carts: {
+					data: state.carts.data.filter((el) => el.id !== action.payload.id || el.size !== action.payload.size),
+					dataLength: state.carts.dataLength - action.payload.count
+				}
+			}
 		default:
 			return state
 	}
@@ -113,9 +150,17 @@ const Context = (props) => {
 				data: [],
 				error: '',
 				dataLength: 0
-			}
+			},
 		},
-		favorites: {}
+		favorites: {
+			data: [],
+			dataLength: 0,
+		},
+		carts: {
+			data: [],
+			dataLength: 0
+		}
+
 	}, init)
 
 	const changeGender = (value) => {
@@ -141,12 +186,30 @@ const Context = (props) => {
 			})
 	}
 
+	const setProductForFavorites = (id) => {
+		dispatch({ type: 'set_favorites', payload: id })
+	}
+	const deleteProductForFavorites = (id) => {
+		dispatch({ type: 'delete_favorites', payload: id })
+	}
+
+	const setProductForCarts = (product) => {
+		dispatch({ type: 'set_carts', payload: product })
+	}
+	const deleteProductForCarts = (id, size, count) => {
+		dispatch({ type: 'delete_carts', payload: { id, size, count: count } })
+	}
+
 	const value = {
 		dispatch,
 		state,
 		changeCategory,
 		changeGender,
 		getProducts,
+		setProductForFavorites,
+		deleteProductForFavorites,
+		setProductForCarts,
+		deleteProductForCarts
 	}
 
 	return <CustomContext.Provider value={value}>

@@ -3,7 +3,9 @@ import { Route, Routes } from "react-router-dom";
 
 // pages
 import Layout from "./Layout/Layout";
+import Cart from "./pages/Cart/Cart";
 import Catalog from "./pages/Catalog/Catalog";
+import Favorites from "./pages/Favorites/Favorites";
 import About from "./pages/Home/About/About";
 import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
@@ -23,6 +25,8 @@ function App() {
 					<Route path='catalog' element={<Catalog />} />
 					<Route path='questions' element={<Questions/>}/>
 					<Route path='product/:id' element={<Product/>}/>
+					<Route path='cart' element={<Cart/>}/>
+					<Route path='favorites' element={<Favorites/>}/>
 					<Route path='*' element={<NotFound />} />
 				</Route>
 			</Routes>

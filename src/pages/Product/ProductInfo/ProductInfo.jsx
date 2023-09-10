@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useTranslation } from "react-i18next";
+import { CustomContext } from '../../../utils/context';
+
+
 const ProductInfo = ({ product }) => {
-	const { i18n } = useTranslation()
+
+	const { t, i18n } = useTranslation()
+	const [size, setSize] = useState('')
+
+	const { setProductForCarts } = useContext(CustomContext)
+
 	return (
 		<div className="product__info">
 			<h2 className="product__title">
@@ -20,12 +28,35 @@ const ProductInfo = ({ product }) => {
 			<ul className="product__list">
 				{
 					product.sizes.map((item) => (
-						<li key={item.id} className={`${item.inStock > 0 ? 'product__size' : 'product__size_null'}`}>
+						<li style={{ background: `${size === item.size ? 'black' : 'transparent'} `, color: `${size === item.size ? 'white' : 'black'} ` }} onClick={() => {
+							if (item.inStock) {
+								setSize(item.size)
+							}
+						}} className={`${item.inStock > 0 ? 'product__size' : 'product__size_null'}`}>
 							{item.size}
 						</li>
 					))
 				}
 			</ul>
+			<div className="product__btns">
+				<div>
+					<button className="product__btn product__btn_cart" onClick={() => {
+						if (size.length) {
+							setProductForCarts({...product, size})
+						} else {
+							alert('виберіть розмір')
+						}
+					}}>
+						{t("product.btn1")}
+					</button>
+				</div>
+				<div>
+					<button className="product__btn product__btn_buy">
+						{t("product.btn2")}
+					</button>
+				</div>
+
+			</div>
 		</div>
 	);
 };
