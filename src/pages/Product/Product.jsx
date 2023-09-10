@@ -14,6 +14,7 @@ const Product = () => {
 	useEffect(() => {
 		axios(`http://localhost:4444/catalog/${params.id}`)
 			.then(({ data }) => setProduct(data))
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	if (JSON.stringify(product) === '{}') {

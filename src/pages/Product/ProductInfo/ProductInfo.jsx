@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
 const ProductInfo = ({ product }) => {
-	const { i, i18n } = useTranslation()
+	const { i18n } = useTranslation()
 	return (
 		<div className="product__info">
 			<h2 className="product__title">

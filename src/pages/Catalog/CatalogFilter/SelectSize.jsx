@@ -9,29 +9,29 @@ import { CustomContext } from "../../../utils/context";
 import { useTranslation } from 'react-i18next';
 
 function SelectSize() {
-	const {t} = useTranslation()
-	const { category, size, setSize, setProducts, products, setPage } = useContext(CustomContext)
+	const { t } = useTranslation()
+	const { state, dispatch } = useContext(CustomContext)
 
 	const handleChange = (event) => {
-		setSize(event.target.value);
-		setProducts({
-			...products, dataLength: products.data.filter((item) => {
-				return event.target.value ? item.sizes.find((el) => el.size === event.target.value).inStock : item
-			}).length
+		dispatch({
+			type: 'change_size', payload: {
+				size: event.target.value, length: state.catalog.products.data.filter((item) => {
+					return event.target.value ? item.sizes.find((el) => el.size === event.target.value).inStock : item
+				}).length
+			}
 		})
-		setPage(1)
 	};
 
 	return (
 		<Box sx={{ minWidth: 120 }}>
 			<FormControl fullWidth>
-			<InputLabel id="demo-simple-select-label">{t("catalog.size")}</InputLabel>
+				<InputLabel id="demo-simple-select-label">{t("catalog.size")}</InputLabel>
 				{
-					category === 'shoes' ?
+					     state.catalog.category === 'shoes' ?
 						<Select
 							labelId="demo-simple-select-label"
 							id="demo-simple-select"
-							value={size}
+							value={state.catalog.size}
 							label={t("catalog.size")}
 							onChange={handleChange}
 						>
@@ -42,11 +42,11 @@ function SelectSize() {
 							<MenuItem value={42}>42</MenuItem>
 							<MenuItem value=''>Сбросить</MenuItem>
 						</Select>
-						: category === 't-short' || category === 'sweatshirts' ?
+						 : state.catalog.category === 't-short' || state.catalog.category === 'sweatshirts' ?
 							<Select
 								labelId="demo-simple-select-label"
 								id="demo-simple-select"
-								value={size}
+								value={state.catalog.size}
 								label={t("catalog.size")}
 								onChange={handleChange}
 							>
@@ -57,11 +57,11 @@ function SelectSize() {
 								<MenuItem value='XXL'>XXL</MenuItem>
 								<MenuItem value=''>{t("catalog.reset")}</MenuItem>
 							</Select>
-							: category === 'pants' ?
+							 : state.catalog.category === 'pants'  ?
 								<Select
 									labelId="demo-simple-select-label"
 									id="demo-simple-select"
-									value={size}
+									value={state.catalog.size}
 									label={t("catalog.size")}
 									onChange={handleChange}
 								>

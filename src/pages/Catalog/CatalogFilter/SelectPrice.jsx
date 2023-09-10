@@ -9,9 +9,9 @@ import { useTranslation } from 'react-i18next';
 
 function SelectPrice() {
 	const {t} = useTranslation()
-	const { price, setPrice } = useContext(CustomContext)
+	const {state, dispatch} = useContext(CustomContext)
 	const handleChange = (event) => {
-		setPrice(event.target.value);
+		dispatch({type: 'change_price', payload: event.target.value})
 	};
 
 	return (
@@ -21,7 +21,7 @@ function SelectPrice() {
 				<Select
 					labelId="demo-simple-select-label"
 					id="demo-simple-select"
-					value={price}
+					value={state.catalog.price}
 					label={t("catalog.price")}
 					onChange={handleChange}
 				>

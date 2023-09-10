@@ -8,26 +8,26 @@ import { CustomContext } from '../../../utils/context';
 import { useTranslation } from 'react-i18next';
 
 function SelectBrand() {
-   const {t} = useTranslation()
-	const { brands, brand, setBrand } = useContext(CustomContext)
+	const { t } = useTranslation()
+	const { dispatch, state } = useContext(CustomContext)
 
 	const handleChange = (event) => {
-		setBrand(event.target.value);
+		dispatch({ type: 'change_brand', payload: event.target.value })
 	};
 
 	return (
 		<Box sx={{ minWidth: 120 }}>
 			<FormControl fullWidth>
-			<InputLabel id="demo-simple-select-label">{t("catalog.brand")}</InputLabel>
+				<InputLabel id="demo-simple-select-label">{t("catalog.brand")}</InputLabel>
 				<Select
 					labelId="demo-simple-select-label"
 					id="demo-simple-select"
-					value={brand}
+					value={state.catalog.brand}
 					label={t("catalog.brand")}
 					onChange={handleChange}
 				>
 					{
-						brands.map((item) => (
+						state.catalog.brands.map((item) => (
 							<MenuItem key={item} value={item}>{item}</MenuItem>
 						))
 					}

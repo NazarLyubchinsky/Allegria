@@ -7,12 +7,12 @@ import CatalogRow from './CatalogRow/CatalogRow'
 import SideBar from './SideBar/SideBar'
 
 const Catalog = () => {
-	const { getProducts, gender, category, price, brand } = useContext(CustomContext)
+	const { getProducts, state } = useContext(CustomContext)
 
 	useEffect(() => {
 		getProducts()
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [gender, category, price, brand])
+	}, [state.catalog.gender, state.catalog.category, state.catalog.price, state.catalog.brand])
 	return (
 		<section className='catalog'>
 			<div className='container'>

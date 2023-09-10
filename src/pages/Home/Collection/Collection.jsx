@@ -5,9 +5,8 @@ import { Link } from "react-router-dom";
 
 const Collection = () => {
 
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 
-	const currentLanguage = i18n.language;
 
 	return (
 		<section className="collection">

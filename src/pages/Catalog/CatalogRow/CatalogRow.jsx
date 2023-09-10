@@ -5,21 +5,21 @@ import { CustomContext } from '../../../utils/context'
 
 const CatalogRow = () => {
 
-	const { products, size, page, setPage } = useContext(CustomContext)
+	const { dispatch, state } = useContext(CustomContext)
 	const { i18n } = useTranslation()
 
 
-	if (products.error.length) {
-		return <h2>{products.error.message}</h2>
+	if (state.catalog.products.error.length) {
+		return <h2>{state.catalog.products.error.message}</h2>
 	}
 	return (
 		<>
 			<div className='catalog__row'>
 				{
-					products.data && products.data.filter((item) => {
-						return size ? item.sizes.find((el) => el.size === size).inStock : item
+					state.catalog.products.data && state.catalog.products.data.filter((item) => {
+						return state.catalog.size ? item.sizes.find((el) => el.size === state.catalog.size).inStock : item
 					}).filter((item, idx) => {
-						return page === 1 ? idx < 6 : idx < page * 6 && idx > page * 6 - 7
+						return state.catalog.page === 1 ? idx < 6 : idx < state.catalog.page * 6 && idx > state.catalog.page * 6 - 7
 					}).map((item) => (
 						<div key={item.id} className='catalog__card'>
 							<Link to={`/product/${item.id}`}>
@@ -40,8 +40,10 @@ const CatalogRow = () => {
 			</div>
 			<ul className='catalog__pagination'>
 				{
-					Math.ceil(products.dataLength / 6) > 1 && new Array(Math.ceil(products.dataLength / 6)).fill(null).map((item, idx) => (
-						<li onClick={() => setPage(idx + 1)} key={idx} className={`catalog__page ${page === idx + 1 ? "active" : ''}`}>
+					Math.ceil(state.catalog.products.dataLength / 6) > 1 && new Array(Math.ceil(state.catalog.products.dataLength / 6)).fill(null).map((item, idx) => (
+						<li onClick={() => {
+							dispatch({ type: 'change_page', payload: idx + 1 })
+						}} key={idx} className={`catalog__page ${state.catalog.page === idx + 1 ? 'active' : ''}`}>
 							{idx + 1}
 						</li>
 					))
