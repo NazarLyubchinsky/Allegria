@@ -21,7 +21,6 @@
 	"about": {
 		"title": "About Us",
 		"subtitle": "enLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipLoremipsumLoreLorem ipsumLorem ipsumLorem ipsumLorem ipsumLoremipLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLoremipsumLorem ipsumLorem ipsumipLorem ipsumLoremLorem ipsumLoremipsumLorem ipsumLorem ipsumLorem ipLorem ipsumLorem ipsumLorem"
-
 	},
 	"catalog": {
 		"menu1": "Home",
@@ -39,13 +38,40 @@
 		"reset": "Reset"
 	},
 	"cart": {
-		"title": "Your cart is empty",
+		"title": "Basket",
+		"name": "Enter your name",
+		"surname": "Enter your last name",
+		"email": "Enter your email",
+		"phone": "Enter your phone number",
+		"address": "Enter delivery address",
+		"delivery": "Delivery",
+		"save": "Save",
+		"edit": "Edit",
+		"pay": "Payment method",
+		"payWebsite": "By card on the website",
+		"payOrder": "Upon receiving the order",
+		"order": "Order",
+		"empty": "Your cart is empty",
 		"text": "Add something to save time and make <br/> shopping even more enjoyable.",
-		"btn": "Go to Catalog"
+		"btn": "Go to Catalog",
+		"sum": "Total price",
+		"errors": {
+			"name": "Name is required",
+			"characters": "Minimum 2 characters",
+			"lastName": "Last name is required",
+			"email": "Email is required",
+			"emailFormat": "Please enter a valid email address",
+			"number": "Number is required",
+			"required": "Required field"
+			
+		}
 	},
 	"product": {
 		"btn1": "Add to Cart",
 		"btn2": " Buy in One Click"
+	},
+	"favorites": {
+		"noFavorites": "No favorites"
 	},
 	"footer": {
 		"title": "STAY UPDATED",

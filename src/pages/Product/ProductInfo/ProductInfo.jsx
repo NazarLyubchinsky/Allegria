@@ -28,7 +28,7 @@ const ProductInfo = ({ product }) => {
 			<ul className="product__list">
 				{
 					product.sizes.map((item) => (
-						<li style={{ background: `${size === item.size ? 'black' : 'transparent'} `, color: `${size === item.size ? 'white' : 'black'} ` }} onClick={() => {
+						<li key={item.id} style={{ background: `${size === item.size ? 'black' : 'transparent'} `, color: `${size === item.size ? 'white' : 'black'} ` }} onClick={() => {
 							if (item.inStock) {
 								setSize(item.size)
 							}

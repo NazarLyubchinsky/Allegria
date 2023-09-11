@@ -1,5 +1,63 @@
+// .popular {
+// 	padding: 120px 0 190px;
+// 	text-align: center;
+// &__title {
+// 	font-weight: 400;
+// 	font-size: 30px;
+// 	letter-spacing: 0.045em;
+// 	text-transform: uppercase;
+// 	color: #0f303f;
+// 	margin-bottom: 75px;
+// }
+// 	&__row {
+// 		display: flex;
+// 		column-gap: 45px;
+// 	}
+// 	&__card {
+// 		width: calc(25% - 33.75px);
+// 		&-img {
+// 			width: 100%;
+// 		}
+// 		&-title {
+// 			font-family: sans-serif;
+// 			font-weight: 500;
+// 			font-size: 18px;
+// 			line-height: 26px;
+// 			text-transform: uppercase;
+// 			color: #0f303f;
+// 			margin-top: 29px;
+// 		}
+// 		&-desc {
+// 			font-family: sans-serif;
+// 			font-weight: 300;
+// 			font-size: 16px;
+// 			line-height: 23px;
+// 			text-align: center;
+// 			text-transform: capitalize;
+// 			color: #0f303f;
+// 			margin-bottom: 10px;
+// 		}
+// &-price {
+// 	font-family: sans-serif;
+// 	font-weight: 500;
+// 	font-size: 14px;
+// 	letter-spacing: 0.045em;
+// 	text-transform: uppercase;
+// 	color: #fd5454;
+// 	display: flex;
+// 	justify-content: center;
+// 	column-gap: 5.5px;
+// }
+// &-oldPrice {
+// 	text-decoration: line-through;
+// 	text-transform: uppercase;
+// 	color: #cecece;
+// }
+// 	}
+// }
+
 .popular {
-	padding: 120px 0 190px;
+	padding: 120px 0;
 	text-align: center;
 	&__title {
 		font-weight: 400;
@@ -9,34 +67,9 @@
 		color: #0f303f;
 		margin-bottom: 75px;
 	}
-	&__row {
-		display: flex;
-		column-gap: 45px;
-	}
-	&__card {
-		width: calc(25% - 33.75px);
-		&-img {
-			width: 100%;
-		}
-		&-title {
-			font-family: sans-serif;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 26px;
-			text-transform: uppercase;
-			color: #0f303f;
-			margin-top: 29px;
-		}
-		&-desc {
-			font-family: sans-serif;
-			font-weight: 300;
-			font-size: 16px;
-			line-height: 23px;
-			text-align: center;
-			text-transform: capitalize;
-			color: #0f303f;
-			margin-bottom: 10px;
-		}
+
+	& .products__card {
+		width: 100%;
 		&-price {
 			font-family: sans-serif;
 			font-weight: 500;
@@ -52,6 +85,37 @@
 			text-decoration: line-through;
 			text-transform: uppercase;
 			color: #cecece;
+		}
+	}
+	& .popular-btn {
+		width: 90px;
+		height: 90px;
+		background: #ffffff;
+		border: none;
+		border-radius: 50%;
+		cursor: pointer;
+		font-size: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	& .swiper {
+		padding: 0 40px;
+		position: relative;
+		& .popular-next {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			z-index: 6;
+			transform: translateY(-50%);
+		}
+		& .popular-prev {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			z-index: 6;
+			transform: translateY(-50%);
 		}
 	}
 }

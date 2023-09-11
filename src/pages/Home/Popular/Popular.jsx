@@ -1,58 +1,152 @@
+
 import React from 'react';
-import card1 from '../../../assets/popular/popular1.png'
-import { useTranslation } from "react-i18next";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation"
+import { Navigation } from "swiper/modules";
+import { SlArrowRight, SlArrowLeft } from "react-icons/sl"
+import { useTranslation } from 'react-i18next';
+
 
 const Popular = () => {
-
 	const { t, i18n } = useTranslation()
-
 	return (
 		<section className="popular">
-			<div className="container-small">
+			<div className="container">
 				<h2 className="popular__title">
 					{t("popular.title")}
 				</h2>
-				<div className="popular__row">
-					<div className="popular__card">
-						<img src={card1} alt="" className="popular__card-img" />
-						<h3 className="popular__card-title">REPlay</h3>
-						<p className="popular__card-desc"> Classic shoes</p>
-						<p className="popular__card-price">
-							<span className="popular__card-oldPrice">6100
+				<Swiper
+					slidesPerView={3}
+					spaceBetween={40}
+					navigation={{
+						nextEl: ".popular-next",
+						prevEl: ".popular-prev"
+					}}
+					loop={true}
+					modules={[Navigation]}
+					className="popularSwiper"
+				>
+					<SwiperSlide>
+						<div className="products__card">
+							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
+							REPlay
+							<p className="products__card-category">
+								Classic shoes
+							</p>
+							<p className="products__card-price">
+								<span className="products__card-oldPrice">6100
+									{i18n.language === 'ua' ? ' грн.' : ' $'}
+								</span>
+								3800
 								{i18n.language === 'ua' ? ' грн.' : ' $'}
-							</span>
-							3800
-							{i18n.language === 'ua' ? ' грн.' : ' $'}
-						</p>
-					</div>
-					<div className="popular__card">
-						<img src={card1} alt="" className="popular__card-img" />
-						<h3 className="popular__card-title">REPlay</h3>
-						<p className="popular__card-desc"> Classic shoes</p>
-						<p className="popular__card-price">
-							<span className="popular__card-oldPrice">6100 	{i18n.language === 'ua' ? ' грн.' : ' $'}</span>
-							3800 	{i18n.language === 'ua' ? ' грн.' : ' $'}
-						</p>
-					</div>
-					<div className="popular__card">
-						<img src={card1} alt="" className="popular__card-img" />
-						<h3 className="popular__card-title">REPlay</h3>
-						<p className="popular__card-desc"> Classic shoes</p>
-						<p className="popular__card-price">
-							<span className="popular__card-oldPrice">6100 	{i18n.language === 'ua' ? ' грн.' : ' $'}</span>
-							3800 	{i18n.language === 'ua' ? ' грн.' : ' $'}
-						</p>
-					</div>
-					<div className="popular__card">
-						<img src={card1} alt="" className="popular__card-img" />
-						<h3 className="popular__card-title">REPlay</h3>
-						<p className="popular__card-desc"> Classic shoes</p>
-						<p className="popular__card-price">
-							<span className="popular__card-oldPrice">6100 	{i18n.language === 'ua' ? ' грн.' : ' $'}</span>
-							3800 	{i18n.language === 'ua' ? ' грн.' : ' $'}
-						</p>
-					</div>
-				</div>
+							</p>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="products__card">
+							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
+							REPlay
+							<p className="products__card-category">
+								Classic shoes
+							</p>
+							<p className="products__card-price">
+								<span className="products__card-oldPrice">6100
+									{i18n.language === 'ua' ? ' грн.' : ' $'}
+								</span>
+								3800
+								{i18n.language === 'ua' ? ' грн.' : ' $'}
+							</p>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="products__card">
+							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
+							REPlay
+							<p className="products__card-category">
+								Classic shoes
+							</p>
+							<p className="products__card-price">
+								<span className="products__card-oldPrice">6100
+									{i18n.language === 'ua' ? ' грн.' : ' $'}
+								</span>
+								3800
+								{i18n.language === 'ua' ? ' грн.' : ' $'}
+							</p>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="products__card">
+							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
+							REPlay
+							<p className="products__card-category">
+								Classic shoes
+							</p>
+							<p className="products__card-price">
+								<span className="products__card-oldPrice">6100
+									{i18n.language === 'ua' ? ' грн.' : ' $'}
+								</span>
+								3800
+								{i18n.language === 'ua' ? ' грн.' : ' $'}
+							</p>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="products__card">
+							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
+							REPlay
+							<p className="products__card-category">
+								Classic shoes
+							</p>
+							<p className="products__card-price">
+								<span className="products__card-oldPrice">6100
+									{i18n.language === 'ua' ? ' грн.' : ' $'}
+								</span>
+								3800
+								{i18n.language === 'ua' ? ' грн.' : ' $'}
+							</p>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="products__card">
+							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
+							REPlay
+							<p className="products__card-category">
+								Classic shoes
+							</p>
+							<p className="products__card-price">
+								<span className="products__card-oldPrice">6100
+									{i18n.language === 'ua' ? ' грн.' : ' $'}
+								</span>
+								3800
+								{i18n.language === 'ua' ? ' грн.' : ' $'}
+							</p>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="products__card">
+							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
+							REPlay
+							<p className="products__card-category">
+								Classic shoes
+							</p>
+							<p className="products__card-price">
+								<span className="products__card-oldPrice">6100
+									{i18n.language === 'ua' ? ' грн.' : ' $'}
+								</span>
+								3800
+								{i18n.language === 'ua' ? ' грн.' : ' $'}
+							</p>
+						</div>
+					</SwiperSlide>
+					<button className="popular-btn popular-prev">
+						<SlArrowLeft />
+					</button>
+					<button className="popular-btn popular-next">
+						<SlArrowRight />
+					</button>
+				</Swiper>
 			</div>
 		</section>
 	);

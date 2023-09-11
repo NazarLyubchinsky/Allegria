@@ -126,6 +126,30 @@ export const reducer = (state, action) => {
 					dataLength: state.carts.dataLength - action.payload.count
 				}
 			}
+		case 'cart_plus_one':
+			return {
+				...state,
+				carts: {
+					data: state.carts.data.map((el) => el.id === action.payload.id && el.size === action.payload.size ? { ...el, count: el.count + 1 } : el),
+					dataLength: state.carts.dataLength++
+				}
+			}
+		case 'cart_minus_one':
+			return {
+				...state,
+				carts: {
+					data: state.carts.data.map((el) => el.id === action.payload.id && el.size === action.payload.size ? { ...el, count: el.count - 1 } : el),
+					dataLength: state.carts.dataLength++
+				}
+			}
+		case 'reset_carts':
+			return {
+				...state,
+				carts: {
+					data: [],
+					dataLength: 0
+				}
+			}
 		default:
 			return state
 	}
@@ -200,6 +224,13 @@ const Context = (props) => {
 		dispatch({ type: 'delete_carts', payload: { id, size, count: count } })
 	}
 
+	const plusProductForCarts = (id, size) => {
+		dispatch({ type: 'cart_plus_one', payload: { id, size } })
+	}
+	const minusProductForCarts = (id, size) => {
+		dispatch({ type: 'cart_minus_one', payload: { id, size } })
+	}
+
 	const value = {
 		dispatch,
 		state,
@@ -209,7 +240,9 @@ const Context = (props) => {
 		setProductForFavorites,
 		deleteProductForFavorites,
 		setProductForCarts,
-		deleteProductForCarts
+		deleteProductForCarts,
+		plusProductForCarts,
+		minusProductForCarts
 	}
 
 	return <CustomContext.Provider value={value}>

@@ -1,6 +1,6 @@
 .footer {
-	padding-top: 160px;
 	max-height: 305px;
+
 	&__top {
 		padding: 65px 0 60px;
 		border-top: 1px solid #eae9e8;
@@ -37,7 +37,7 @@
 			background: transparent;
 			cursor: pointer;
 			& svg {
-				transition: transform .5s ease-in; 
+				transition: transform 0.5s ease-in;
 			}
 			&:hover svg {
 				transform: translateX(15px);

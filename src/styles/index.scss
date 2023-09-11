@@ -13,6 +13,10 @@
 	margin: 0 auto;
 	padding: 0 20px;
 }
+main {
+	position: relative;
+	min-height: calc(100vh - 401px);
+}
 
 .container-small {
 	max-width: 1137px;
@@ -33,5 +37,4 @@
 @import "product";
 @import "cart";
 @import "favorites";
-
 @import "footer";
