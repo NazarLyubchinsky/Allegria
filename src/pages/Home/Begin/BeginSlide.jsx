@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import "swiper/css";
 import { Link } from 'react-router-dom';
 import begin1 from '../../../assets/begin/beginImg1.png'
+import begin2 from '../../../assets/begin/image 63.png'
 import { Autoplay } from 'swiper/modules';
 
 const BeginSlide = () => {
@@ -17,7 +18,7 @@ const BeginSlide = () => {
 				delay: 2000,
 				disableOnInteraction: false,
 			}}
-			modules={[Autoplay]}
+			// modules={[Autoplay]}
 			className="Swiper"
 		>
 			<SwiperSlide>
@@ -51,7 +52,7 @@ const BeginSlide = () => {
 							{t("begin.subtitle")}
 						</Link>
 					</div>
-					<img src={begin1} alt="" className="begin__imgSecond" />
+					<img src={begin2} alt="" className="begin__imgSecond" />
 				</div>
 			</SwiperSlide>
 		</Swiper>

@@ -18,20 +18,44 @@ const Popular = () => {
 					{t("popular.title")}
 				</h2>
 				<Swiper
+
 					slidesPerView={3}
-					spaceBetween={40}
+					spaceBetween={30}
 					navigation={{
 						nextEl: ".popular-next",
 						prevEl: ".popular-prev"
 					}}
 					loop={true}
+					breakpoints={{
+						320: {
+							slidesPerView: 1,
+							spaceBetween: 30,
+						},
+						567: {
+							slidesPerView: 2,
+							spaceBetween: 30,
+						},
+						768: {
+							slidesPerView: 2,
+							spaceBetween: 30,
+						},
+						992: {
+							slidesPerView: 3,
+							spaceBetween: 30,
+						},
+						1024: {
+							slidesPerView: 3,
+							spaceBetween: 30,
+						},
+					}}
 					modules={[Navigation]}
 					className="popularSwiper"
+
 				>
 					<SwiperSlide>
 						<div className="products__card">
 							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
-							REPlay
+							<p><p>REPlay</p></p>
 							<p className="products__card-category">
 								Classic shoes
 							</p>
@@ -47,7 +71,7 @@ const Popular = () => {
 					<SwiperSlide>
 						<div className="products__card">
 							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
-							REPlay
+							<p>REPlay</p>
 							<p className="products__card-category">
 								Classic shoes
 							</p>
@@ -63,7 +87,7 @@ const Popular = () => {
 					<SwiperSlide>
 						<div className="products__card">
 							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
-							REPlay
+							<p>REPlay</p>
 							<p className="products__card-category">
 								Classic shoes
 							</p>
@@ -79,7 +103,7 @@ const Popular = () => {
 					<SwiperSlide>
 						<div className="products__card">
 							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
-							REPlay
+							<p>REPlay</p>
 							<p className="products__card-category">
 								Classic shoes
 							</p>
@@ -95,7 +119,7 @@ const Popular = () => {
 					<SwiperSlide>
 						<div className="products__card">
 							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
-							REPlay
+							<p>REPlay</p>
 							<p className="products__card-category">
 								Classic shoes
 							</p>
@@ -111,7 +135,7 @@ const Popular = () => {
 					<SwiperSlide>
 						<div className="products__card">
 							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
-							REPlay
+							<p>REPlay</p>
 							<p className="products__card-category">
 								Classic shoes
 							</p>
@@ -127,7 +151,7 @@ const Popular = () => {
 					<SwiperSlide>
 						<div className="products__card">
 							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
-							REPlay
+							<p>REPlay</p>
 							<p className="products__card-category">
 								Classic shoes
 							</p>
