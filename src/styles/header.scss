@@ -30,24 +30,7 @@
 			}
 		}
 	}
-	&__search {
-		display: flex;
 
-		column-gap: 20px;
-		&-text {
-			font-weight: 400;
-			font-size: 16px;
-			letter-spacing: 0.1em;
-			text-transform: uppercase;
-			color: #0f303f;
-		}
-		&-field {
-			width: 150px;
-			border: none;
-			outline: none;
-			border-bottom: 1px solid #0f303f;
-		}
-	}
 	&__right {
 		display: flex;
 		column-gap: 57px;
@@ -85,6 +68,35 @@
 				top: 45px;
 				transform: translateX(-50%);
 			}
+		}
+	}
+}
+@media only screen and (max-width: 992px) {
+	.header {
+		&__menu {
+			display: none;
+		}
+		&__right {
+			column-gap: 50px;
+		}
+	}
+}
+@media only screen and (max-width: 576px) {
+	.header {
+		&__lang {
+			display: none;
+		}
+	}
+}
+@media only screen and (max-width: 380px) {
+	.header {
+		&__title {
+			&-svg {
+				width: 100px;
+			}
+		}
+		&__right {
+			column-gap: 30px;
 		}
 	}
 }

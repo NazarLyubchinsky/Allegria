@@ -18,7 +18,7 @@ const BeginSlide = () => {
 				delay: 2000,
 				disableOnInteraction: false,
 			}}
-			// modules={[Autoplay]}
+			modules={[Autoplay]}
 			className="Swiper"
 		>
 			<SwiperSlide>

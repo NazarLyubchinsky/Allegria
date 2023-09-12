@@ -2,8 +2,9 @@
 	padding: 8px 0 50px;
 	&__content {
 		display: flex;
-		column-gap: 25px;
+		column-gap: 35px;
 		margin-top: 25px;
+		justify-content: space-between;
 		&-title {
 			font-weight: 500;
 			font-size: 25px;

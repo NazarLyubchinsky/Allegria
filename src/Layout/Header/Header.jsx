@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { CustomContext } from '../../utils/context';
+import BurgerModal from './BurgerModal';
 
 const Header = () => {
 	const { t, i18n } = useTranslation()
@@ -15,8 +16,8 @@ const Header = () => {
 			<div className="container">
 				<nav className="header__nav">
 					<h1 className='header__title'>
-						<Link to='/'>
-							<svg width="129" height="16" viewBox="0 0 129 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<Link className='header__title-link' to='/'>
+							<svg className='header__title-svg' width="129" height="16" viewBox="0 0 129 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M10.4191 15.7846L9.4082 13.0251H2.74338L1.65907 15.7846H0L6.23273 0L12.1027 15.7846H10.4191ZM6.15936 3.95834L3.19993 11.7287H8.92719L6.15936 3.95834Z" fill="#0F303F" />
 								<path d="M20.6914 15.7846V0.552734H22.3016V14.4395H27.0424V15.7846H20.6914Z" fill="#0F303F" />
 								<path d="M35.917 15.7846V0.552734H37.5271V14.4395H42.2679V15.7846H35.917Z" fill="#0F303F" />
@@ -33,10 +34,7 @@ const Header = () => {
 						<Link onClick={() => changeGender('woman')} to='/catalog' className='header__menu-link' >{t("header.link1")}</Link>
 						<Link onClick={() => changeGender('men')} to={`/catalog`} className='header__menu-link' >{t("header.link2")}</Link>
 						<Link to='/about' className='header__menu-link' >{t("header.link3")}</Link>
-						<label htmlFor="" className='header__search'>
-							<span className='header__search-text'>{t("header.link4")}</span>
-							<input className='header__search-field' type="text" />
-						</label>
+					
 					</div>
 					<div className='header__right'>
 						<div className='header__lang'>
@@ -75,6 +73,7 @@ const Header = () => {
 								}
 							</Link>
 						</div>
+						<BurgerModal />
 					</div>
 				</nav>
 			</div>

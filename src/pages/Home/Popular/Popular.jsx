@@ -55,7 +55,7 @@ const Popular = () => {
 					<SwiperSlide>
 						<div className="products__card">
 							<img src="https://static.zara.net/photos///2023/V/0/1/p/6840/052/400/2/w/271/6840052400_1_1_1.jpg?ts=1675335018457" alt="" className="products__card-img" />
-							<p><p>REPlay</p></p>
+							<p>REPlay</p>
 							<p className="products__card-category">
 								Classic shoes
 							</p>
