@@ -42,7 +42,7 @@ const Footer = () => {
 			<div className="container">
 				<div className="footer__bottom">
 					<p className="footer__text">{t("footer.text1")} © 2023 Allegria.com</p>
-					<p style={{ display: 'flex', gap:"15px" }}>
+					<p style={{ display: 'flex', gap: "15px" }}>
 						<Link to='https://github.com/NazarLyubchinsky' target='_blank'><AiFillGithub style={{ fontSize: '24px' }} /></Link>
 						<Link to='https://www.linkedin.com/in/nazar-lyubchynskyi-37a89026b/' target='_blank'><AiFillLinkedin style={{ fontSize: '24px' }} /></Link>
 					</p>

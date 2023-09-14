@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -6,20 +6,7 @@ import NavigateList from './NavigateList';
 
 
 
-const BurgerModal = () => {
-	const [isModalOpen, setIsModalOpen] = useState(false);
-
-
-	const handleButtonClick = () => {
-		setIsModalOpen(true);
-		document.body.style.overflow = 'hidden';
-	};
-
-	const closeModal = () => {
-		setIsModalOpen(false);
-		document.body.style.overflow = 'auto';
-
-	};
+const BurgerModal = ({ closeModal, handleButtonClick, isModalOpen }) => {
 
 	return (
 		<>

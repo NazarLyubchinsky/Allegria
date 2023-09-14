@@ -27,7 +27,7 @@ function SelectSize() {
 			<FormControl fullWidth>
 				<InputLabel id="demo-simple-select-label">{t("catalog.size")}</InputLabel>
 				{
-					     state.catalog.category === 'shoes' ?
+					state.catalog.category === 'shoes' ?
 						<Select
 							labelId="demo-simple-select-label"
 							id="demo-simple-select"
@@ -42,7 +42,7 @@ function SelectSize() {
 							<MenuItem value={42}>42</MenuItem>
 							<MenuItem value=''>Сбросить</MenuItem>
 						</Select>
-						 : state.catalog.category === 't-short' || state.catalog.category === 'sweatshirts' ?
+						: state.catalog.category === 't-short' || state.catalog.category === 'sweatshirts' ?
 							<Select
 								labelId="demo-simple-select-label"
 								id="demo-simple-select"
@@ -57,7 +57,7 @@ function SelectSize() {
 								<MenuItem value='XXL'>XXL</MenuItem>
 								<MenuItem value=''>{t("catalog.reset")}</MenuItem>
 							</Select>
-							 : state.catalog.category === 'pants'  ?
+							: state.catalog.category === 'pants' ?
 								<Select
 									labelId="demo-simple-select-label"
 									id="demo-simple-select"

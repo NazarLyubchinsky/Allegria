@@ -1,27 +1,21 @@
 import React, { useContext, useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { CustomContext } from '../../../utils/context';
+import ProductTitle from '../ProductTitle';
 
 
 const ProductInfo = ({ product }) => {
 
-	const { t, i18n } = useTranslation()
+	const { t } = useTranslation()
 	const [size, setSize] = useState('')
 
 	const { setProductForCarts } = useContext(CustomContext)
 
 	return (
 		<div className="product__info">
-			<h2 className="product__title">
-				{product.title}
-			</h2>
-			<p className="product__category">
-				{product.category}
-			</p>
-			<p className="product__price">
-				{i18n.language === 'en' ? product.price : product.price * 83}
-				{i18n.language === 'ru' ? ' руб.' : ' $'}
-			</p>
+			<div className='product__info-text'>
+				<ProductTitle product={product} />
+			</div>
 			<p className="product__title-size">
 				Размер
 			</p>
@@ -42,7 +36,7 @@ const ProductInfo = ({ product }) => {
 				<div>
 					<button className="product__btn product__btn_cart" onClick={() => {
 						if (size.length) {
-							setProductForCarts({...product, size})
+							setProductForCarts({ ...product, size })
 						} else {
 							alert('виберіть розмір')
 						}

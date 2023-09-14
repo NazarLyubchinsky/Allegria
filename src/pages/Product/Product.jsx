@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import BreadCrumbs from '../Catalog/BreadCrumbs/BreadCrumbs'
 import ProductInfo from './ProductInfo/ProductInfo'
 import ProductSlide from './ProductSlide/ProductSlide'
+import ProductTitle from './ProductTitle'
 
 const Product = () => {
 
@@ -14,7 +15,7 @@ const Product = () => {
 	useEffect(() => {
 		axios(`http://localhost:4444/catalog/${params.id}`)
 			.then(({ data }) => setProduct(data))
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	if (JSON.stringify(product) === '{}') {
@@ -26,7 +27,9 @@ const Product = () => {
 				<BreadCrumbs />
 			</div>
 			<div className="container-small">
-
+				<div className="product__text">
+					<ProductTitle product={product} />
+				</div>
 				<div className="product__row">
 					<ProductSlide product={product} />
 					<ProductInfo product={product} />
