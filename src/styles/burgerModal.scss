@@ -7,6 +7,7 @@
 		display: none;
 	}
 }
+
 .open_modal_button {
 	color: black;
 	cursor: pointer;
@@ -36,6 +37,12 @@
 	z-index: 99;
 	padding: 0 24px;
 }
+@media only screen and (max-width: 576px) {
+	.modal_content {
+		padding: 0 10px;
+	}
+}
+
 @keyframes slideIn {
 	0% {
 		transform: translateX(100%);
@@ -54,4 +61,3 @@
 }
 
 /* SideBar */
-

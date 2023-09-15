@@ -1,6 +1,14 @@
 .cart {
 	text-align: center;
 	padding: 45px 0;
+	&__wrapper {
+		padding: 20px 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: space-between;
+		margin-bottom: 15px;
+	}
 	&__left {
 		width: 30%;
 	}
@@ -24,8 +32,8 @@
 			line-height: 140%;
 			color: #e64926;
 			cursor: pointer;
-			transition: color .2s ease-in;
-			&:hover{
+			transition: color 0.2s ease-in;
+			&:hover {
 				color: #4c1e13;
 			}
 		}
@@ -47,6 +55,11 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: 25px;
+		&-item {
+			display: flex;
+			flex-direction: column;
+			row-gap: 25px;
+		}
 		&-input {
 			border: none;
 			outline: none;
@@ -60,12 +73,6 @@
 		width: 70%;
 	}
 
-	&__wrapper {
-		padding: 20px 0;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 20px;
-	}
 	&__card {
 		justify-content: space-between;
 		display: flex;
@@ -114,3 +121,119 @@
 		color: #eae9e8;
 	}
 }
+@media only screen and (max-width: 992px) {
+	.cart {
+		&__left {
+			width: 40%;
+		}
+		&__right {
+			width: 60%;
+		}
+		&__card {
+			width: 100%;
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	.cart {
+		&__block {
+			gap: 25px;
+			flex-direction: column-reverse;
+		}
+		&__left {
+			width: 100%;
+		}
+		&__right {
+			width: 100%;
+		}
+		&__form {
+			&-item {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				gap: 20px;
+			}
+			&-list {
+				width: calc(50% - 10px);
+				flex-direction: column;
+				display: flex;
+				gap: 15px;
+			}
+			&-btn {
+				min-width: 150px;
+				padding: 7px;
+			}
+		}
+		&__deli {
+			&-area {
+				width: 60%;
+			}
+			&-item {
+				display: flex;
+				gap: 50px;
+			}
+		}
+		&__pay {
+			&-wrapper {
+				justify-content: space-around;
+				flex-direction: row;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 576px) {
+	.cart {
+		&__wrapper {
+			padding: 0;
+		}
+		&__img {
+			margin: 30px 0 25px;
+		}
+	}
+}
+@media only screen and (max-width: 400px) {
+	.cart {
+		padding: 29px 0;
+		&__btn{
+			padding: 9px;
+		}
+		&__block{
+			margin-top: 15px;
+		}
+		&__title{
+			font-size: 19px;
+		}
+		&__pay {
+			&-wrapper {
+				flex-direction: column;
+			}
+		}
+		&__img{
+			width: 90px;
+			margin: 15px 0 15px;
+
+		}
+		&__form {
+			row-gap: 12px;
+
+			&-item {
+				gap: 12px;
+			}
+			&-list {
+				width: 100%;
+				gap: 12px;
+			}
+		}
+		&__deli {
+			&-area {
+				width: 100%;
+			}
+			&-item {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+		}
+	}
+}
+

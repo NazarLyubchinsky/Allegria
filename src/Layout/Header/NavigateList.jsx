@@ -55,8 +55,24 @@ const NavigateList = ({ closeModal }) => {
 				<Link to={`/catalog`} onClick={handleClose}>
 					<SideBarItem value={'shoes'} text={`${t("catalog.aside6")}`} />
 				</Link>
-
 			</div>
+			<ul className="bottom">
+				<li className="bottom__item">
+					<Link onClick={handleClose} className="bottom__link" to='about'>
+						{t("footer.link1")}
+					</Link>
+				</li>
+				<li className="bottom__item">
+					<Link onClick={handleClose} className="bottom__link" to='questions'>
+						{t("footer.link2")}
+					</Link>
+				</li>
+				<li className="bottom__item">
+					<Link onClick={handleClose} className="bottom__link" >
+						{t("footer.link3")}
+					</Link>
+				</li>
+			</ul>
 		</div>
 
 	)

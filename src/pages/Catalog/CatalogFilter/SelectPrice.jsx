@@ -30,9 +30,9 @@ function SelectPrice({ closeModal }) {
 						label={t("catalog.price")}
 						onChange={handleChange}
 					>
-						<MenuItem value='asc'>По возростании</MenuItem>
-						<MenuItem value='desc'>По убиванию</MenuItem>
-						<MenuItem value=''>Сбросить</MenuItem>
+						<MenuItem value='asc'>{t("catalog.filter.asc")}</MenuItem>
+						<MenuItem value='desc'>{t("catalog.filter.desc")}</MenuItem>
+						<MenuItem value=''>{t("catalog.filter.reset")}</MenuItem>
 					</Select>
 				</FormControl>
 			</Box>
@@ -45,7 +45,7 @@ function SelectPrice({ closeModal }) {
 						closeModal(e);
 					}}
 				>
-					По возростании
+				{t("catalog.filter.asc")}
 				</p>
 				<p
 					className='selectPrice__mobile-btn'
@@ -54,7 +54,7 @@ function SelectPrice({ closeModal }) {
 						closeModal(e);
 					}}
 				>
-					По убыванию
+				{t("catalog.filter.desc")}
 				</p>
 				<p className='selectPrice__mobile-btn'
 					onClick={(e) => {
@@ -62,7 +62,7 @@ function SelectPrice({ closeModal }) {
 						closeModal(e);
 					}}
 				>
-					Сбросить
+				{t("catalog.filter.reset")}
 				</p>
 			</div>
 		</>

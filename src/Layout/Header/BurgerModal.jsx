@@ -28,11 +28,11 @@ const BurgerModal = ({ closeModal, handleButtonClick, isModalOpen }) => {
 						<div className='modal_overlay' onClick={closeModal}>
 						</div>
 						<div className='modal_content'>
-							<section className='sidebar' >
+							<section className='modal_wrapper' >
 								{/* <span className='close_modal_button' onClick={closeModal}>
 									&times;
 								</span> */}
-								<nav className='nav'>
+								<nav className='modal_wrapper-content'>
 									<ul className='menu'>
 										<li >
 											<NavLink

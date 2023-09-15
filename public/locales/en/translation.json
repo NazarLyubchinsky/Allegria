@@ -35,7 +35,14 @@
 		"descending": "Descending",
 		"brand": "Brand",
 		"size": "Size",
-		"reset": "Reset"
+		"reset": "Reset",
+		"filter": {
+			"sort": "Sort",
+			"filter": "Filter",
+			"asc": "Ascending",
+			"desc": "Descending",
+			"reset": "Reset"
+		}
 	},
 	"cart": {
 		"title": "Basket",
@@ -63,7 +70,6 @@
 			"emailFormat": "Please enter a valid email address",
 			"number": "Number is required",
 			"required": "Required field"
-			
 		}
 	},
 	"product": {
@@ -72,6 +78,22 @@
 	},
 	"favorites": {
 		"noFavorites": "No favorites"
+	},
+	"questions": {
+		"home": "Home",
+		"faq": "Frequently Asked Questions",
+		"shopping": "SHOPPING",
+		"contact": "Do you have questions or suggestions?",
+		"writeTous": "WRITE TO US",
+		"interest": "What interests you:",
+		"send": "Send",
+		"name": "Name",
+		"email": "Email",
+		"message": "Message",
+		"questionsData": {
+			"question": "Customer's Question",
+			"answer": "Payment is made in cash to the courier directly upon delivery to the recipient's address. By choosing this payment method, you have the opportunity to inspect and try on the ordered items. If any item doesn't suit you, you can simply return it to the courier without making a payment."
+		}
 	},
 	"footer": {
 		"title": "STAY UPDATED",

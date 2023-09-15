@@ -129,6 +129,10 @@
 		&__card-img{
 			height: 220px;
 		}
-		
+		&__card{
+			&-title{
+				font-size: 16px;
+			}
+		}
 	}
 }

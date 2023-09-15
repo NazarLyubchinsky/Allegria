@@ -41,7 +41,7 @@ const CatalogFilter = () => {
 				<SelectSize />
 			</div>
 			<div className='filter__select-mobile'>
-				<button onClick={openFilter} className='filter__select-mobile_filter'>Фильтры
+				<button onClick={openFilter} className='filter__select-mobile_filter'>{t("catalog.filter.filter")}
 					<AiFillCaretDown />
 					{isModalOpen ? (
 						<>
@@ -51,8 +51,8 @@ const CatalogFilter = () => {
 								<div className='modal__content' >
 									<div className='modal__content-top'>
 										<div className='modal__content-row'>
-											<GoArrowLeft size="24px" />
-											<p>Фильтр</p>
+											<GoArrowLeft size="24px"  style={{display:'none'}}/>
+											<p>{t("catalog.filter.filter")}</p>
 											<AiOutlineClose onClick={closeModal} />
 										</div>
 									</div>
@@ -89,7 +89,7 @@ const CatalogFilter = () => {
 				</button>
 				<button onClick={openSort} className='filter__select-mobile_sort'>
 					{
-						state.catalog.price === 'asc' ? 'По возрастанию' : (state.catalog.price === 'desc' ? 'По убыванию' : 'Сортировка')
+						state.catalog.price === 'asc' ? `${t("catalog.filter.asc")}` : (state.catalog.price === 'desc' ? `${t("catalog.filter.desc")}` : `${t("catalog.filter.sort")}`)
 					}
 
 					<AiFillCaretDown />
@@ -101,7 +101,7 @@ const CatalogFilter = () => {
 								<div className='modal2__content' >
 									<div className='modal__content-top'>
 										<div className='modal__content-row'>
-											<p className='modal__content-row_text'>Сортировка </p>
+											<p className='modal__content-row_text'>{t("catalog.filter.sort")} </p>
 											<div style={{
 												position: 'absolute',
 												right: '20px',

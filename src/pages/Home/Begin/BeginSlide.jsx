@@ -30,7 +30,7 @@ const BeginSlide = () => {
 						</span>
 						american vintage
 					</h2>
-					<Link href="#" className="begin__link">
+					<Link to="/catalog" className="begin__link">
 						{t("begin.subtitle")}
 					</Link>
 					<img src={begin1} alt="" className="begin__img" />
@@ -48,7 +48,7 @@ const BeginSlide = () => {
 							lucy
 
 						</h2>
-						<Link href="#" className="begin__link">
+						<Link to="/catalog" className="begin__link">
 							{t("begin.subtitle")}
 						</Link>
 					</div>

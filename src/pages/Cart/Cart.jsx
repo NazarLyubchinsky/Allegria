@@ -52,73 +52,80 @@ const Cart = () => {
 				<div className='cart__block'>
 					<div className='cart__left'>
 						<form noValidate className="cart__form" onSubmit={handleSubmit(onSubmit)}>
-							<input {...register('name', {
-								required: {
-									message: `${t("cart.errors.name")}`,
-									value: true
-								},
-								minLength: {
-									message: `${t("cart.errors.characters")}`,
-									value: 2
-								}
+							<div className='cart__form-item'>
+								<div className='cart__form-list'>
+									<input {...register('name', {
+										required: {
+											message: `${t("cart.errors.name")}`,
+											value: true
+										},
+										minLength: {
+											message: `${t("cart.errors.characters")}`,
+											value: 2
+										}
+									})} className='cart__form-input' type="text" placeholder={t("cart.name")} />
+									<span style={{ color: 'red' }}>{errors.name && errors.name?.message} </span>
+								</div>
 
-							})} className='cart__form-input' type="text" placeholder={t("cart.name")} />
-							<span style={{ color: 'red' }}>{errors.name && errors.name?.message} </span>
+								<div className='cart__form-list'>
+									<input {...register('surname', {
+										required: {
+											message: `${t("cart.errors.lastName")}`,
+											value: true
+										},
+										minLength: {
+											message: `${t("cart.errors.characters")}`,
+											value: 2
+										}
+									})} className='cart__form-input' type="text" placeholder={t("cart.surname")} />
+									<span style={{ color: 'red' }}>{errors.surname && errors.surname?.message}</span>
+								</div>
 
+								<div className='cart__form-list'>
+									<input  {...register('email', {
+										required: {
+											message: `${t("cart.errors.email")}`,
+											value: true
+										},
+										minLength: {
+											message: `${t("cart.errors.emailFormat")}`,
+											value: 10
+										},
+										pattern: {
+											message: `${t("cart.errors.characters")}`,
+											value: /^[^ ]+@[^ ]+\.[a-z]{2,5}$/
+										}
+									})} className='cart__form-input' type="email" placeholder={t("cart.email")} />
+									<span style={{ color: 'red' }}>{errors.email && errors.email?.message}</span>
+								</div>
 
-							<input {...register('surname', {
-								required: {
-									message: `${t("cart.errors.lastName")}`,
-									value: true
-								},
-								minLength: {
-									message: `${t("cart.errors.characters")}`,
-									value: 2
-								}
-
-							})} className='cart__form-input' type="text" placeholder={t("cart.surname")} />
-							<span style={{ color: 'red' }}>{errors.surname && errors.surname?.message}</span>
-
-							<input  {...register('email', {
-								required: {
-									message: `${t("cart.errors.email")}`,
-									value: true
-								},
-								minLength: {
-									message: `${t("cart.errors.emailFormat")}`,
-									value: 10
-								},
-								pattern: {
-									message: `${t("cart.errors.characters")}`,
-									value: /^[^ ]+@[^ ]+\.[a-z]{2,5}$/
-								}
-
-							})} className='cart__form-input' type="email" placeholder={t("cart.email")} />
-							<span style={{ color: 'red' }}>{errors.email && errors.email?.message}</span>
-
-							<input {...register('phone', {
-								required: true
-							})} className='cart__form-input' type="tel" placeholder={t("cart.phone")} />
-							<span style={{ color: 'red' }}>{errors.phone && <span>{t("cart.errors.number")}</span>}</span>
+								<div className='cart__form-list'>
+									<input {...register('phone', {
+										required: true
+									})} className='cart__form-input' type="tel" placeholder={t("cart.phone")} />
+									<span style={{ color: 'red' }}>{errors.phone && <span>{t("cart.errors.number")}</span>}</span>
+								</div>
+							</div>
 
 							<div className="cart__deli">
 								<h3 className="cart__deli-title">{t("cart.delivery")}</h3>
-
-								{
-									address ? <p> {changeAddress}
-									</p> : <textarea {...register('address', {
-										required: true
-									})} value={changeAddress} onChange={(e) => setChangeAddress(e.target.value)} placeholder={t("cart.address")} className='cart__deli-area' />
-								}
-
-								<p className='cart__deli-red ' onClick={() => {
-									if (!changeAddress.length && !address) {
-										setAddress(false)
-									} else {
-										setAddress(!address)
+								<div className='cart__deli-item'>
+									{
+										address ? <p> {changeAddress}
+										</p> : <textarea {...register('address', {
+											required: true
+										})} value={changeAddress} onChange={(e) => setChangeAddress(e.target.value)} placeholder={t("cart.address")} className='cart__deli-area' />
 									}
-								}}>{address ? `${t("cart.edit")}` : `${t("cart.save")}`}</p>
+									<p className='cart__deli-red ' onClick={() => {
+										if (!changeAddress.length && !address) {
+											setAddress(false)
+										} else {
+											setAddress(!address)
+										}
+									}}>{address ? `${t("cart.edit")}` : `${t("cart.save")}`}</p>
+								</div>
 							</div>
+
 							<div className='cart__pay'>
 								<h3 className="cart__deli-title">{t("cart.pay")}</h3>
 								<div className='cart__pay-wrapper'>
@@ -135,7 +142,9 @@ const Cart = () => {
 								</div>
 								<span style={{ color: 'red' }}>{errors.pay && <span>{t("cart.errors.required")}</span>}</span>
 							</div>
-							<button className="cart__form-btn" type="submit">{t("cart.order")}</button>
+							<div className="cart__form-buttom">
+								<button className="cart__form-btn" type="submit">{t("cart.order")}</button>
+							</div>
 						</form>
 					</div>
 

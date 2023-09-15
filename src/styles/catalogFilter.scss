@@ -58,7 +58,7 @@
 					width: 100%;
 					height: 100%;
 					display: flex;
-					z-index: 99;
+					z-index: 98;
 					&__close {
 						position: fixed;
 						top: 74px;
@@ -106,7 +106,7 @@
 					width: 100%;
 					height: 100%;
 					display: flex;
-					z-index: 99;
+					z-index: 98;
 					&__close {
 						position: fixed;
 						top: 74px;
@@ -147,6 +147,21 @@
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 576px) {
+	.filter {
+		padding-right: 0;
+		&__select {
+			display: none;
+			&-mobile {
+				.modal {
+					&__content {
+						width: 70%;
 					}
 				}
 			}
