@@ -7,6 +7,7 @@ This repository contains code for a React application developed to create a user
 ## Table of Contents
 
 - [Live Demo](#live-demo)
+- [Screenshots](#Screenshots)
 - [Description](#description)
 - [The main features of the store include](#main-features)
 - [Backend](#backend)
@@ -21,7 +22,7 @@ Check out the live project on Netlify: (https://master--boisterous-moxie-b83abd.
 
 Please note that there might be issues with loading products from server on the live demo.
 
-
+## Screenshots
 ![localhost_3000_catalog_](https://github.com/NazarLyubchinsky/Allegria/assets/120901032/1cfe60db-b80f-4efc-a5c6-a0de5eed4be1)
 
 
