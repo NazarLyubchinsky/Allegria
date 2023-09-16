@@ -28,26 +28,24 @@ Please note that there might be issues with loading products from server on the 
 
 ## main features
 
-- Private Authentication: Every user must authenticate themselves before using the store, ensuring data security and confidentiality.
-- Product Catalog: We offer a product catalog that can be easily browsed by users. You can search for products in different categories and filter them by price, as well as search by name.
-- Product Creation: Users have the option to create new products and add them to the catalog. This helps keep the product range constantly updated.
+- Product Catalog: We offer a product catalog that can be easily browsed by users. You can search for products in different categories and filter them by price.
 - Add to Cart: Users can add selected products to their cart for convenient order placement.
 - Order Placement: When the cart is filled, users can place an order, specifying delivery and other necessary details.
 - Product Filtering: The product catalog supports the ability to filter by price, sorting them in ascending or descending order. This allows users to quickly find products that meet their requirements.
-- Product Search: The store also features a search function that allows users to find specific products by name.
 
 Our application is designed with user convenience and the needs of a modern online store in mind. It is a convenient and efficient tool for shopping and managing products.
-
 ## Backend
 
-The application uses a fake REST API provided by [json-server]([https://github.com/typicode/json-server](https://privateauth.onrender.com)) 
+The application uses a fake REST API provided by [json-server](https://my-json-server.typicode.com/NazarLyubchinsky/json-server) 
+or download the repository and use it "http://localhost:4444" information from above
 
 ## Frontend
 - The latest version of React is used.
 - Functional components and JSX are employed.
 - Icons from the [lucide-react](https://mui.com/material-ui/material-icons/) library are used.
 - React Forms: I leveraged React to create and manage forms within the application. This allows for a dynamic and responsive user experience when capturing and submitting data.
-- Material-UI for Input Elements: I incorporated Material-UI components for input fields to enhance the visual appeal and usability of the form.
+- Reduce
+- custom UseContext
 
 ## UI Requirements
 
@@ -61,7 +59,8 @@ To run the project on your local machine:
 2. Navigate to the project directory: `cd [project-folder]`
 3. Install dependencies: `npm install`
 4. Run the Vite development server: `npm run start`
-5. Access the application in your browser at `http://localhost:3000` or link provided by vite
+5. Start the front-end and back-end development servers with "npm run dev."
+6. Access the application in your browser at `http://localhost:3000` or link provided by vite
 
 ## Contact
 
