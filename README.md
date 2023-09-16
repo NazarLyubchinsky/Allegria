@@ -32,6 +32,7 @@ Please note that there might be issues with loading products from server on the 
 - Add to Cart: Users can add selected products to their cart for convenient order placement.
 - Order Placement: When the cart is filled, users can place an order, specifying delivery and other necessary details.
 - Product Filtering: The product catalog supports the ability to filter by price, sorting them in ascending or descending order. This allows users to quickly find products that meet their requirements.
+- On our website, you have the ability to easily switch the interface language from Ukrainian to English and vice versa. Simply select the desired language in the top right corner of the page, and the website will automatically switch to the chosen language."
 
 Our application is designed with user convenience and the needs of a modern online store in mind. It is a convenient and efficient tool for shopping and managing products.
 ## Backend
