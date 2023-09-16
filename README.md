@@ -22,6 +22,10 @@ Check out the live project on Netlify: (https://master--boisterous-moxie-b83abd.
 Please note that there might be issues with loading products from server on the live demo.
 
 
+![localhost_3000_catalog_](https://github.com/NazarLyubchinsky/Allegria/assets/120901032/1cfe60db-b80f-4efc-a5c6-a0de5eed4be1)
+
+
+
 ## Description
 
  The application is designed with user-friendly features and a responsive layout.
