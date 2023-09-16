@@ -15,7 +15,7 @@ This repository contains code for a React application developed to create a user
 
 ## Live Demo
 
-Check out the live project on Netlify: (([https://main--preeminent-travesseiro-4bf4a2.netlify.app/](https://master--boisterous-moxie-b83abd.netlify.app/catalog)))
+Check out the live project on Netlify: (https://master--boisterous-moxie-b83abd.netlify.app/)
 
 Please note that there might be issues with loading products from server on the live demo.
 
