@@ -1,11 +1,13 @@
 import React, { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import { CustomContext } from '../../utils/context'
 
 const Favorites = () => {
 
 	const { state, deleteProductForFavorites } = useContext(CustomContext)
 	const { t, i18n } = useTranslation()
+
 	return (
 		<section className='favorites'>
 			{
@@ -14,7 +16,9 @@ const Favorites = () => {
 						{state.favorites.data.map(item => (
 							<div key={item.id} className="favorites__card">
 								<div className='favorites__card-wrapper'>
-									<img src={item.img[0]} alt="" className="favorites__img" />
+									<Link to={`/product/${item.id}`}>
+										<img src={item.img[0]} alt="" className="favorites__img" />
+									</Link>
 									<div className="favorites__card-info">
 										<h3 className='catalog__card-title'>{item.title}</h3>
 										<p className='catalog__card-category'>{item.category}</p>

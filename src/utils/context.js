@@ -194,12 +194,18 @@ const Context = (props) => {
 		dispatch({ type: 'change_category', payload: value })
 	}
 
+	
+// if you want more products download the repository and use http://localhost:4444
+//  const  localhst = 'http://localhost:4444'
+
+// and  https://my-json-server.typicode.com/NazarLyubchinsky/json-server
+const  jsonServer = 'https://my-json-server.typicode.com/NazarLyubchinsky/json-server' 
 	const getProducts = () => {
-		axios(`http://localhost:4444/catalog?gender=${state.catalog.gender}&category=${state.catalog.category}${state.catalog.price !== '' ?
+		axios(`${jsonServer}/catalog?gender=${state.catalog.gender}&category=${state.catalog.category}${state.catalog.price !== '' ?
 			'&_sort=price&_order=' + state.catalog.price : ''}${state.catalog.brand !== '' ? '&brand=' + state.catalog.brand : ''}`)
 			.then(({ data }) => {
 				dispatch({ type: 'get_products', payload: { data: data, length: data.length, error: '' } })
-				axios(`http://localhost:4444/brands?category=${state.catalog.category}&gender=${state.catalog.gender}`)
+				axios(`${jsonServer}/brands?category=${state.catalog.category}&gender=${state.catalog.gender}`)
 					.then(({ data }) => {
 						dispatch({ type: 'get_brands', payload: data[0].brand })
 					})

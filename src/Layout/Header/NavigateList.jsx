@@ -19,8 +19,16 @@ const NavigateList = ({ closeModal }) => {
 		<div className='list'>
 			<div className='list__gender'>
 				<div className='list__lang'>
-					<p className={`list__lang-link ${i18n.language === 'ua' ? 'active' : ''}`} onClick={() => changeLanguage("ua")} >UA</p>
-					<p className={`list__lang-link ${i18n.language === 'en' ? 'active' : ''}`} onClick={() => changeLanguage("en")} >EN</p>
+					<p className={`list__lang-link ${i18n.language === 'ua' ? 'active' : ''}`} onClick={() => {
+						changeLanguage("ua")
+						closeModal();
+					}
+					}>
+						UA</p>
+					<p className={`list__lang-link ${i18n.language === 'en' ? 'active' : ''}`} onClick={() => {
+						closeModal();
+						changeLanguage("en")
+					}} >EN</p>
 				</div>
 				<div className='list__gender-link'>
 					<Link

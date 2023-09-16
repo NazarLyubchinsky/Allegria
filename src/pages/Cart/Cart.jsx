@@ -153,7 +153,9 @@ const Cart = () => {
 							{
 								state.carts.dataLength ? state.carts.data.map((item, index) => (
 									<div key={index} className="cart__card">
-										<img src={item.img[0]} alt="" className="favorites__img" />
+										<Link to={`/product/${item.id}`}>
+											<img src={item.img[0]} alt="" className="favorites__img" />
+										</Link>
 										<div className="cart__card-info">
 											<h3 className='catalog__card-title'>{item.title}</h3>
 											<p className='catalog__card-category'>{item.category}</p>
@@ -199,6 +201,7 @@ const Cart = () => {
 									</>
 							}
 						</div>
+					
 						{
 							state.carts.dataLength ? (
 								<span>{t("cart.sum")} : {i18n.language === 'ua' ? state.carts.data.reduce((acc, rec) => {
