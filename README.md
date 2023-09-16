@@ -24,6 +24,9 @@ Please note that there might be issues with loading products from server on the 
 
 ## Screenshots
 ![localhost_3000_catalog_](https://github.com/NazarLyubchinsky/Allegria/assets/120901032/1cfe60db-b80f-4efc-a5c6-a0de5eed4be1)
+-------
+![localhost_3000_catalog_ (1)](https://github.com/NazarLyubchinsky/Allegria/assets/120901032/56a74031-4d86-4989-b327-2fe18eba97b9)
+
 
 
 
