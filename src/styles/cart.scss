@@ -72,6 +72,20 @@
 	&__right {
 		width: 70%;
 	}
+	&__form {
+		&-btn{
+			background-color: #0f303f;
+			color: #fff;
+			border: none;
+			padding: 7px;
+			cursor: pointer;
+			transition: background .2s ease-in;
+			&:hover{
+			background: #185d7d;
+				
+			}
+		}
+	}
 
 	&__card {
 		justify-content: space-between;
@@ -119,6 +133,11 @@
 		font-size: 16px;
 		text-transform: uppercase;
 		color: #eae9e8;
+		transition: background .2s ease-in;
+		&:hover{
+		background: #185d7d;
+			
+		}
 	}
 }
 @media only screen and (max-width: 992px) {

@@ -14,7 +14,7 @@ const ProductTitle = ({ product }) => {
 			</p>
 			<p className="product__price">
 				{i18n.language === 'en' ? product.price : product.price * 83}
-				{i18n.language === 'ru' ? ' руб.' : ' $'}
+				{i18n.language === 'ua' ? ' грн' : ' $'}
 			</p>
 		</>
 	)

@@ -25,7 +25,7 @@ const Favorites = () => {
 										<p className='catalog__card-brand'>{item.brand}</p>
 										<p className='catalog__card-price'>
 											{i18n.language === 'en' ? item.price : item.price * 83}
-											{i18n.language === 'ru' ? ' руб.' : ' $'}
+											{i18n.language === 'ua' ? ' грн' : ' $'}
 										</p>
 									</div>
 									<span className='favorites__card-remove' onClick={() => deleteProductForFavorites(item.id)}>

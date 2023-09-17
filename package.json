@@ -18,6 +18,7 @@
 		"i18next-browser-languagedetector": "^7.1.0",
 		"i18next-http-backend": "^2.2.2",
 		"json-server": "^0.17.3",
+		"overlay-loading-react": "^1.0.6",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-hook-form": "^7.46.1",

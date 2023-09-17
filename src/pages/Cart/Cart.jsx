@@ -192,7 +192,7 @@ const Cart = () => {
 											<img src={cartImg} alt="" className="cart__img" />
 											<p className="cart__text" dangerouslySetInnerHTML={{ __html: t("cart.text") }} />
 
-											<Link to={'/catalog'}>
+											<Link to={'/catalog'} >
 												<button className="cart__btn" type={"button"} >
 													{t("cart.btn")}
 												</button>
