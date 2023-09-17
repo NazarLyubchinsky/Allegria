@@ -11,10 +11,13 @@ const Product = () => {
 	const [product, setProduct] = useState({})
 
 	const params = useParams()
-	
+// if you want more products download the repository and use http://localhost:4444
+// const  localhst = 'http://localhost:4444'
 
+// and  https://my-json-server.typicode.com/NazarLyubchinsky/json-server
+const  jsonServer = 'https://my-json-server.typicode.com/NazarLyubchinsky/json-server' 
 	useEffect(() => {
-		axios(`http://localhost:4444/catalog/${params.id}`)
+		axios(`${jsonServer}/catalog/${params.id}`)
 			.then(({ data }) => setProduct(data))
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])

@@ -194,7 +194,7 @@ const Context = (props) => {
 		dispatch({ type: 'change_category', payload: value })
 	}
 
-	
+
 // if you want more products download the repository and use http://localhost:4444
 //  const  localhst = 'http://localhost:4444'
 

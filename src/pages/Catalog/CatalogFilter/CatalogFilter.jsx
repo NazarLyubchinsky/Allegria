@@ -41,7 +41,8 @@ const CatalogFilter = () => {
 				<SelectSize />
 			</div>
 			<div className='filter__select-mobile'>
-				<button onClick={openFilter} className='filter__select-mobile_filter'>{t("catalog.filter.filter")}
+				<button onClick={openFilter} className='filter__select-mobile_filter'>
+					{t("catalog.filter.filter")}
 					<AiFillCaretDown />
 					{isModalOpen ? (
 						<>
@@ -51,7 +52,7 @@ const CatalogFilter = () => {
 								<div className='modal__content' >
 									<div className='modal__content-top'>
 										<div className='modal__content-row'>
-											<GoArrowLeft size="24px"  style={{display:'none'}}/>
+											<GoArrowLeft size="24px" style={{ display: 'none' }} />
 											<p>{t("catalog.filter.filter")}</p>
 											<AiOutlineClose onClick={closeModal} />
 										</div>
