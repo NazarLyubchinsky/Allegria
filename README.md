@@ -2,7 +2,7 @@
 
 This repository contains code for a React application developed to create a user interface for a store. The store includes many features to provide convenience and functionality for users.
 
-##### Please note that there are only 14 products available. JSON-server has a limit. If you want to see more, download the repository and modify the link in the context.js file (src -> utils -> context.js) in the getProducts function to point to "http://localhost:4444"
+##### Please note that there are only 14 products available. JSON-server has a limit. If you want to see more, download the repository and modify the link in the context.js file (src -> utils -> context.js) in the getProducts function to point to "http://localhost:4444" And change the link in the useEffect in Product (src => pages => product).
 
 ## Table of Contents
 
